@@ -24,6 +24,8 @@ sha256 hash算法结果比对
 
 [以太坊定义的bls公钥长度](https://github.com/ethereum/consensus-specs/blob/7a5cdc2a9df9a19c3abe47d88a8b7587a9f109d3/specs/core/0_beacon-chain.md#custom-types)为48个字节/Byte
 
+[社区里关于公钥长度的讨论](https://ethresear.ch/t/bls12-381-keys-and-signatures-sizes/6152/3)
+
 我们的程序[lib-kengen]，在hash前，使用的也是48个字节的压缩公钥，[参见这里](01-priv-key/100.out.txt#L4)
 
 
