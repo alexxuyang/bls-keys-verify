@@ -45,7 +45,7 @@ async function main () {
     await bls.init(bls.BLS12_381)
     await initBLS()
 
-    for(let i = 0; i < 1000000; i++) {
+    for(let i = 0; i < 100; i++) {
         console.log(i);
         // await sleep();
         genPubKeyByPrivKey()

@@ -1,0 +1,17 @@
+{
+  "name": "03-compressed-pub-key",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@chainsafe/bls": "^4.0.0",
+    "@jadepool/bls": "^1.0.0",
+    "ethereumjs-wallet": "^1.0.2"
+  }
+}
