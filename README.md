@@ -37,7 +37,9 @@ ethereum在通过公钥生成地址过程中，也不包含'0x'字符；所以�
 所以，可以看到在做hash时不需要字符'0x'
 
 // Private key = , 0xdf9dd56d0e9c5a8b69025e7cbe8bd017002f15900c085aebf2813a82716ba52c
+
 // Publid key = , 0x07c2e848078e51af308edd0228ed13f7c07f5cd1ea0b661f635eacf0acd722f093b7f36978d62148054333bc56d4b89087581b8cdcba473c8885ae09f079482c
+
 // Address = , 0x38ee0653a0bf931b6b9c4d742e4a278237198c2b
 
 
