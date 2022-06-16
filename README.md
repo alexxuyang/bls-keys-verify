@@ -8,7 +8,7 @@
 
 A库用来生成的withdraw key，B库生成的signing key
 
-[程序](01-priv-key/main.js)验证了100万个私钥在A、B两个库里面生成的公钥，结果一致
+[程序](01-priv-key/main.js)验证了100万个私钥在A、B两个库里面生成的公钥，结果一致\
 
 
 ### hash函数的使用
@@ -17,14 +17,14 @@ sha256 hash算法结果比对
 
 在生成credential的时候，需要使用一个sha256算法（官方工具使用的是python的)
 
-我们使用的是chainsafe/ssz库 A，[我们将A]([程序](02-sha256-hash/main.js))与一个每周下载量在80万次的一个sha256库，做了100万次hash生成的比对，结果一致
+我们使用的是chainsafe/ssz库 A，[我们将A]([程序](02-sha256-hash/main.js))与一个每周下载量在80万次的一个sha256库，做了100万次hash生成的比对，结果一致\
 
 
 ### bls公钥的长度
 
 [以太坊定义的bls公钥长度](https://github.com/ethereum/consensus-specs/blob/7a5cdc2a9df9a19c3abe47d88a8b7587a9f109d3/specs/core/0_beacon-chain.md#custom-types)为48个字节/Byte
 
-我们的程序[lib-kengen]，在hash前，使用的也是48个字节的压缩公钥，[参见这里](01-priv-key/100.out.txt#L4)
+我们的程序[lib-kengen]，在hash前，使用的也是48个字节的压缩公钥，[参见这里](01-priv-key/100.out.txt#L4)\
 
 
 ### 送进HASH函数的参数格式
