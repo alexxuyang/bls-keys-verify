@@ -29,11 +29,13 @@ sha256 hash算法结果比对
 
 ### 送进HASH函数的参数格式
 
-将公钥数据放入hash函数时，不应该包含'0x'字符；我们的程序是这样做的
+将公钥数据放入hash函数时，不应该包含'0x'字符；我们的[程序](https://github.com/alexxuyang/bls-keys-verify/blob/c78c4e3f04876be29826769e5c958d1cced49588/03-compressed-pub-key/main.js#L22)是这样做的
 
 ethereum在通过公钥生成地址过程中，也不包含'0x'字符；所以我认为我们这样做是对的
 
-可以这样测试，到这个网站通过公钥生成地址A：http://emn178.github.io/online-tools/keccak_256.html
+可以这样测试，为什么这个逻辑是对的
+
+到这个网站通过公钥生成地址A：http://emn178.github.io/online-tools/keccak_256.html
 
 然后再通过metamask倒入私钥生成地址B，可以看到A与B相同
 
