@@ -3,7 +3,10 @@ let {PrivateKey, initBLS} = require('@chainsafe/bls')
 const assert = require('assert')
 
 function genPubKeyByPrivKey () {
-    let r = rng();
+    // let r = rng();
+
+    // 0x3a = 0x00111010
+    let r = 'ffa4584bfc786ae7baf9fef0be777dea5ef32bb2bccb78876dc42689988b66fe';
 
     console.log(r)
 
@@ -12,22 +15,8 @@ function genPubKeyByPrivKey () {
 
     t.setLittleEndian(buf);
 
-    const priv_jp = '0x' + t.serializeToHexStr();
-    const pub_jp = '0x' + t.getPublicKey().serializeToHexStr();
+    const priv_jp = t.serializeToHexStr();
     console.log(priv_jp);
-    console.log(pub_jp);
-
-    const priv_chainsafe = PrivateKey.fromHexString(priv_jp)
-    const priv_chainsafe_hex = priv_chainsafe.toHexString()
-    const pub_chainsafe = priv_chainsafe.toPublicKey().toHexString()
-
-    console.log(priv_chainsafe_hex);
-    console.log(pub_chainsafe);
-
-    assert(priv_jp === priv_chainsafe_hex);
-    assert(pub_jp === pub_chainsafe);
-
-    console.log();
     console.log();
 }
 
@@ -45,7 +34,7 @@ async function main () {
     await bls.init(bls.BLS12_381)
     await initBLS()
 
-    for(let i = 0; i < 1000000; i++) {
+    for(let i = 0; i < 1; i++) {
         console.log(i);
         // await sleep();
         genPubKeyByPrivKey()

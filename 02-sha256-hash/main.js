@@ -14,22 +14,22 @@ function rng() {
     return randomNum.toString(16);
 }
 
-function main() {
+async function main() {
+    let f = 0;
     for(let i = 0; i < 1000000; i++) {
-        console.log(i);
 
         let r = rng();
-        let h_chainsafe = Buffer.from(hash_chainsafe(r)).toString('hex');
-        console.log(h_chainsafe);
+        let h_chainsafe = Buffer.from(hash_chainsafe(Buffer.from(r, 'hex'))).toString('hex');
+        let h_js = hash_js(Buffer.from(r));
+
+        assert(h_chainsafe === h_js);
+        console.log(i, r, h_chainsafe, h_js);
         
-        let h_js = hash_js(r);
-        console.log(h_js);
-
-        assert(h_chainsafe, h_js);
-
         console.log();
         console.log();
     }
+
+    console.log("found", f);
 }
 
 main()
