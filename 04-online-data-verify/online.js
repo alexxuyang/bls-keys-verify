@@ -11,8 +11,11 @@ let pubkeys = [
 ];
 
 let credential = [
+    // https://etherscan.io/tx/0x4f1def5ab14362310012285b111e157c50db1f4c3089387fdd0def1c10bd2b14
     '0x00307c240f56efaeed5d81832fe8e7772451a1f1e2fdf8ecd607b0ea3d4d7a71',
+    // https://etherscan.io/tx/0x0367dedc536a1b2acd1ce60ea8b4bc4ff717314fa3409d97d3f44034a76c859b
     '0x00c0f53b1596745be47ac375b9365e3420d68876febd48d79edf25b928d78e28',
+    // https://etherscan.io/tx/0x7f8883bf3321110224fa20d724b25fa82608d7763aebeb25a13ba3b130bd735b
     '0x00156c54bbea28c0f96f6488540500bf5205b78cbcdf1c98e92555e0e3aa0a95'
 ];
 
