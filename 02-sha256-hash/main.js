@@ -11,7 +11,7 @@ function rng() {
     }
 
     const randomNum = BigInt(temp);
-    return randomNum.toString(16);
+    return randomNum.toString(16).substr(2);
 }
 
 async function main() {
@@ -19,11 +19,11 @@ async function main() {
     for(let i = 0; i < 1000000; i++) {
 
         let r = rng();
-        let h_chainsafe = Buffer.from(hash_chainsafe(Buffer.from(r, 'hex'))).toString('hex');
-        let h_js = hash_js(Buffer.from(r));
-
-        assert(h_chainsafe === h_js);
-        console.log(i, r, h_chainsafe, h_js);
+        let h1 = '0x00' + Buffer.from(hash_chainsafe(Buffer.from(r, 'hex'))).slice(1).toString('hex');
+        let h2 = '0x00' + hash_js(Buffer.from(r, 'hex')).substr(2);
+        
+        console.log(i, r, h1, h2);
+        assert(h1 === h2);
         
         console.log();
         console.log();
